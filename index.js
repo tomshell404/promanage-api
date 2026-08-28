@@ -38,7 +38,7 @@ import { pruneExpiredSessions } from './services/sessionService.js';
 import { maintenanceMiddleware } from './middleware/maintenance.js';
 
 const app = express();
-const PORT = process.env.API_PORT || 3001;
+const PORT = process.env.PORT || process.env.API_PORT || 3001;
 
 app.use(cors({
   origin: function(origin, callback) {
